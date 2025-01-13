@@ -1,6 +1,6 @@
 {
-    "name": "Moja Aplikacja",
-    "short_name": "MojaApp",
+    "name": "mObywatel 2.0",
+    "short_name": "mObywatel 2.0",
     "start_url": "/",
     "display": "standalone",
     "background_color": "#ffffff",
