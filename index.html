@@ -11,18 +11,6 @@
     <meta name="format-detection" content="telephone=no">
     <link rel="manifest" href="https://ib05lvtzg55be6a6c6kpg3.ct8.pl/apka-3-0/manifest.json">
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
-
-    <link rel="manifest" href="manifest2.json">
-<link rel="icon" href="https://ib05lvtzg55be6a6c6kpg3.ct8.pl/apka-3-0/images/coi_common_ui_ic_mobywatel_logo.svg">
-<script>
-    if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/sw.js')
-            .then(() => console.log('Service Worker zarejestrowany!'))
-            .catch(err => console.error('Błąd rejestracji Service Workera:', err));
-    }
-</script>
-
-    
     <style>
         body {
             margin: 0;
@@ -46,6 +34,27 @@
                 .then(registration => console.log('Service Worker zarejestrowany:', registration))
                 .catch(error => console.error('Błąd rejestracji Service Workera:', error));
         }
+        
     </script>
+    <script>
+    <link rel="icon" href="https://ib05lvtzg55be6a6c6kpg3.ct8.pl/apka-3-0/images/coi_common_ui_ic_mobywatel_logo.svg">
+<script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js')
+            .then(() => console.log('Service Worker zarejestrowany!'))
+            .catch(err => console.error('Błąd rejestracji Service Workera:', err));
+    }
+
+    // PWA konfiguracja bez manifestu
+    document.addEventListener('DOMContentLoaded', () => {
+        const link = document.createElement('link');
+        link.rel = 'apple-touch-icon';
+        link.href = 'https://ib05lvtzg55be6a6c6kpg3.ct8.pl/apka-3-0/images/coi_common_ui_ic_mobywatel_logo.svg';
+        document.head.appendChild(link);
+
+        console.log('PWA ikona ustawiona bez manifest.json');
+    });
+</script>
+
 </body>
 </html>
